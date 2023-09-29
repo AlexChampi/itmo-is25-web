@@ -1,0 +1,236 @@
+:root {
+    --background-gray: #f0f0f0;
+    --text-color: #333;
+    --main-color: #003366;
+    --light-text-color: #fff;
+    --link-hover: #87CEEB;
+    --highlight-color: #ADD8E6;
+    --highlight-light-color: #D3D3D3;
+    --dark-text: #666;
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--background-gray);
+}
+
+.header {
+    background-color: var(--main-color);
+    padding: 10px 0;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header__logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+}
+
+.header__menu-item {
+    margin-right: 20px;
+}
+
+.header__menu-link {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.header__menu-link:hover {
+    color: var(--link-hover);
+}
+
+.header__user-menu {
+    list-style: none;
+    display: flex;
+}
+
+.header__user-menu-item {
+    margin-right: 20px;
+}
+
+.header__user-menu-link {
+    text-decoration: none;
+    color: var(--light-text-color);
+}
+
+.header__user-menu-link:hover {
+    color: var(--link-hover);
+}
+
+.main {
+    padding: 20px;
+}
+
+.main__heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.articles__item {
+    background-color: var(--light-text-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.articles__item-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.articles__item-subheading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    word-spacing: 5px;
+}
+
+.articles__item-author {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.articles__item-date {
+    color: #777;
+    font-size: 14px;
+}
+
+.articles__item-tags {
+    list-style: none;
+    padding: 0;
+}
+
+.articles__item-tag {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: var(--light-text-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.articles__item-content {
+    margin-top: 25px;
+}
+
+.articles__item-content-paragraph {
+    margin-top: 10px;
+    line-height: 1.4;
+    white-space: normal;
+    width: 1200px;
+}
+
+.articles__item-content-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 1px 5px 8px rgb(0, 0, 0);
+    margin-right: 20px;
+}
+
+.aside {
+    background-color: var(--background-gray);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.aside__heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.aside__list {
+    list-style: none;
+    padding: 0;
+}
+
+.aside__list-item {
+    margin-bottom: 10px;
+}
+
+.aside__list-link {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.aside__list-link:hover {
+    color: var(--link-hover);
+}
+
+.others {
+    padding: 20px;
+    background-color: var(--light-text-color);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.others__ascii {
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.others__code {
+    white-space: pre-wrap;
+}
+
+.others__blockquote {
+    margin-top: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+.others__blockquote-cite {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.others__equation {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.footer {
+    background-color: var(--main-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer__copyright {
+    font-size: 14px;
+}
+
+.footer__telegram-link {
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.footer__telegram-link:hover {
+    color: var(--link-hover);
+}
