@@ -84,7 +84,7 @@ body {
     background-color: var(--light-text-color);
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .articles__item-heading {
@@ -95,7 +95,7 @@ body {
 }
 
 .articles__item-subheading {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -106,6 +106,10 @@ body {
     color: var(--main-color);
     text-decoration: none;
     font-weight: bold;
+}
+
+.articles__item-author:hover {
+    color: var(--link-hover);
 }
 
 .articles__item-date {
@@ -128,6 +132,12 @@ body {
     font-size: 12px;
 }
 
+.articles__item-tag:hover {
+    background-color: var(--link-hover);
+    color: var(--text-color);
+    cursor: default;
+}
+
 .articles__item-content {
     margin-top: 25px;
 }
@@ -148,24 +158,31 @@ body {
 }
 
 .aside {
-    background-color: var(--background-gray);
+    background-color: var(--light-text-color);
     padding: 20px;
+    border: 1px solid ;
     border-radius: 5px;
     margin-top: 20px;
+    display: inline-block;
 }
 
 .aside__heading {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
 }
 
 .aside__list {
-    list-style: none;
-    padding: 0;
+    list-style: decimal;
 }
 
 .aside__list-item {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -177,6 +194,12 @@ body {
 
 .aside__list-link:hover {
     color: var(--link-hover);
+}
+
+.aside__heading-item-img {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 300px;
 }
 
 .others {
