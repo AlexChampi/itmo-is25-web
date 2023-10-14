@@ -13,6 +13,8 @@
 
 body {
     background-color: var(--background-gray);
+    position: relative;
+    min-height: 100vh
 }
 
 .header {
@@ -80,7 +82,14 @@ body {
     margin-bottom: 20px;
 }
 
+.articles {
+    display: flex;
+    flex-direction: column;
+}
+
 .articles__item {
+    display: flex;
+    flex-direction: column;
     background-color: var(--light-text-color);
     padding: 20px;
     margin-bottom: 20px;
@@ -118,6 +127,7 @@ body {
 }
 
 .articles__item-tags {
+    display: flex;
     list-style: none;
     padding: 0;
 }
@@ -138,35 +148,69 @@ body {
     cursor: default;
 }
 
-.articles__item-content {
+.articles__item-text {
     margin-top: 25px;
+    width: 70%;
 }
 
 .articles__item-content-paragraph {
     margin-top: 10px;
     line-height: 1.4;
     white-space: normal;
-    width: 1200px;
 }
 
-.articles__item-content-image {
-    max-width: 100%;
-    height: auto;
+.articles__item-images {
+    display: flex;
+}
+
+.articles__item-images-img {
     margin-top: 20px;
     box-shadow: 1px 5px 8px rgb(0, 0, 0);
     margin-right: 20px;
 }
 
+
+@media (max-width: 767px) {
+    .articles__item-images-img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .articles__item-images-img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .articles__item-images-img {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 .aside {
     background-color: var(--light-text-color);
     padding: 20px;
-    border: 1px solid ;
+    border: 1px solid;
     border-radius: 5px;
     margin-top: 20px;
-    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    display: grid;
 }
 
-.aside__heading {
+.aside__articles-rating {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.aside__articles-heading {
+    margin-right: 5px;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -175,7 +219,7 @@ body {
     border-bottom: 1px solid;
 }
 
-.aside__list {
+.aside__articles-rating-list {
     list-style: decimal;
 }
 
@@ -200,6 +244,54 @@ body {
     margin-top: 10px;
     border-radius: 10px;
     width: 300px;
+}
+
+.aside__catch-of-week {
+    grid-row: 1;
+    grid-column: 2 /span 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside__catch-of-week-images_image-title {
+    font-weight: bold;
+}
+
+.aside__catch-of-week-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.aside__catch-of-week-images_image {
+    margin: 5px;
+    text-align: center;
+}
+
+.aside__catch-of-week-images_image-img {
+    border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+    .aside__catch-of-week-images_image-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px){
+    .aside__catch-of-week-images_image-img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+.aside__daily-quote {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .others {
@@ -236,6 +328,13 @@ body {
     color: var(--main-color);
 }
 
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
 .footer {
     background-color: var(--main-color);
     color: var(--light-text-color);
@@ -256,4 +355,63 @@ body {
 
 .footer__telegram-link:hover {
     color: var(--link-hover);
+}
+
+
+.diary__table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.diary {
+    text-align: center;
+}
+
+.diary__title {
+    background-color: #87CEEB;
+    text-align: center;
+}
+
+.diary__table-container-table-header {
+    font-weight: bold;
+}
+
+.diary__table-container-table-header,
+.diary__table-container-table-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+.diary__table-container-table-row:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+.diary__table-container-table-row:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 1180px) {
+    .header__nav {
+        flex-direction: column;
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+    }
+    .others {
+        display: none;
+    }
+
+    .aside__catch-of-week-images {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .articles__item-text {
+        width: 100%;
+    }
 }
