@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="icon" href="assets/img/fishing-pole-and-fish.svg">
+    <script src="js/script.js"></script>
     <title>Рыбач</title>
 </head>
 <body>
 <!--<script src="js/outline-control.js"></script>-->
 <header class="header">
     <nav class="header__nav">
-        <a href="/" class="header__logo">
+        <a href="index.html" class="header__logo">
             <img src="assets/img/logo.png" alt="Рыбач" title="Рыбач"/>
         </a>
         <ul class="header__menu">
             <li class="header__menu-item">
-                <a href="#" class="header__menu-link">Статьи</a>
+                <a href="index.html" class="header__menu-link">Главная</a>
             </li>
             <li class="header__menu-item">
-                <a href="#" class="header__menu-link">Места для ловли</a>
+                <a href="articles.html" class="header__menu-link">Статьи</a>
+            </li>
+            <li class="header__menu-item">
+                <a href="fish-places.html" class="header__menu-link">Места для ловли</a>
             </li>
         </ul>
         <ul class="header__user-menu">
@@ -31,11 +35,13 @@
             <li class="header__user-menu-item">
                 <a href="user_page.html" class="header__user-menu-link">Личный кабинет</a>
             </li>
+            <li class="emoji">🎣</li>
         </ul>
     </nav>
 </header>
 <main class="main">
-        <section class="articles">
+    <section class="articles">
+
         <h1 class="main__heading">Форум рыбаков №1 в мире</h1>
         <article class="articles__item">
             <div class="articles__top">
@@ -249,6 +255,7 @@
     </section>
 </main>
 <footer class="footer">
+    <span class="footer__load-time"></span>
     <span class="footer__copyright">© 2023 «Рыбач»</span>
     <a href="https://t.me/lifestailtg" class="footer__telegram-link">Telegram</a>
 </footer>

@@ -57,6 +57,7 @@ body {
 .header__user-menu {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .header__user-menu-item {
@@ -278,7 +279,7 @@ body {
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .aside__catch-of-week-images_image-img {
         width: 300px;
         height: 300px;
@@ -403,6 +404,7 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
     .others {
         display: none;
     }
@@ -414,4 +416,18 @@ footer {
     .articles__item-text {
         width: 100%;
     }
+}
+
+
+.active-page {
+    color: var(--dark-text);
+    cursor: text;
+}
+
+.active-page:hover {
+    color: var(--dark-text);
+}
+
+.emoji {
+    font-size: 42px;
 }
