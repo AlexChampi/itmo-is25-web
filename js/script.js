@@ -1,10 +1,17 @@
-const startTime = new Date()
+(function () {
+    const startTime = new Date()
+    function showTime() {
+        const loadTime = new Date() - startTime
+        const footerLoadTime = document.getElementsByClassName("footer__load-time")[0]
+        footerLoadTime.textContent = `Страница загружена за ${loadTime} мс`
+        console.log(loadTime)
+    }
+    window.addEventListener("load", showTime)
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    const loadTime = (new Date() - startTime) / 1000
-    const footerLoadTime = document.getElementsByClassName("footer__load-time")[0]
-    footerLoadTime.textContent = `Страница загружена за ${loadTime}`
-    console.log(loadTime)
+
     const currentPagePath = window.location.pathname;
 
     const menuLinks = document.querySelectorAll('.header__menu-link');
@@ -15,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
             link.classList.add('active-page');
         }
     });
-
 
     const emojis = ['🐡', '🐠', '🐟', '🎣', '🛶', '🐬', '🐳', '🦞', '🦐', '🪱', '🪰', '🦟', '🎏'];
     const emoji = document.querySelector('.emoji');
