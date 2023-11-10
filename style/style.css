@@ -359,39 +359,39 @@ footer {
 }
 
 
-.diary__table-container {
+.main__table-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 100%;
 }
 
-.diary {
+.main__table {
     text-align: center;
 }
 
-.diary__title {
+.main__table-title {
     background-color: #87CEEB;
     text-align: center;
 }
 
-.diary__table-container-table-header {
+.main__table-container-table-header {
     font-weight: bold;
 }
 
-.diary__table-container-table-header,
-.diary__table-container-table-row {
+.main__table-container-table-header,
+.main__table-container-table-row {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     background-color: #f0f0f0;
     padding: 5px;
 }
 
-.diary__table-container-table-row:nth-child(even) {
+.main__table-container-table-row:nth-child(even) {
     background-color: #e0e0e0;
 }
 
-.diary__table-container-table-row:nth-child(odd) {
+.main__table-container-table-row:nth-child(odd) {
     background-color: #f0f0f0;
 }
 
