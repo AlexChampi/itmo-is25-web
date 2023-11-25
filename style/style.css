@@ -439,3 +439,42 @@ footer {
     align-items: center;
     flex-direction: column;
 }
+
+.preloader-error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.articles-list {
+    display: flex;
+    justify-content: space-around
+}
+.articles-list__item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.articles-list__item-author {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.articles-list__item-date {
+    color: #777;
+    font-size: 14px;
+}
+
+.articles-list__item-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.articles-list__item-img img {
+    width: 250px;
+    height: 200px;
+}
